@@ -214,7 +214,7 @@ public class OAuthAccessResourceRequestTest {
         expect(request.getParameterValues(OAuth.OAUTH_BEARER_TOKEN)).andStubReturn(new String[] {"sometoken"});
         expect(request.getParameter(OAuth.OAUTH_VERSION_DIFFER)).andStubReturn(null);
         expect(request.getHeader(OAuth.HeaderType.AUTHORIZATION))
-            .andStubReturn("Bearer sadfasfd,oauth_signature_method=\"HMAC-SHA1\"");
+            .andStubReturn("Bearer sadfasfd");
         replay(request);
 
         try {

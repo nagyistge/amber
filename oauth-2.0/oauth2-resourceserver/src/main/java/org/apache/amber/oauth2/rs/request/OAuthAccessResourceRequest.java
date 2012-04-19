@@ -122,7 +122,7 @@ public class OAuthAccessResourceRequest {
                 "Found more than one mechanism for authenticating client");
         }
 
-        if (ex != null) {
+        if (ex != null && foundValidStyles == 0) {
             throw ex;
         }
 
